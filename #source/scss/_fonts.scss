@@ -1,0 +1,49 @@
+/*==================================== FONTS ====================================*/
+/*==================================== FONTS ====================================*/
+
+@import url('https://fonts.googleapis.com/css2?family=Lato:wght@300;400;700&family=Open+Sans:wght@300;400&display=swap');
+
+@font-face {
+	font-family: 'Gotham';
+	src: url('../fonts/Gotham/Gotham-Black.otf') format('otf');
+	src: url('../fonts/Gotham/Gotham-Black.woff') format('woff');
+	src: url('../fonts/Gotham/Gotham-Black.woff2') format('woff2');
+	font-weight: 900;
+	font-style: normal;
+}
+
+@font-face {
+	font-family: 'Gotham';
+	src: url('../fonts/Gotham/Gotham-UltraItalic.otf') format('otf');
+	src: url('../fonts/Gotham/Gotham-UltraItalic.woff') format('woff');
+	src: url('../fonts/Gotham/Gotham-UltraItalic.woff2') format('woff2');
+	font-weight: 900;
+	font-style: italic;
+}
+
+@font-face {
+	font-family: 'Gotham';
+	src: url('../fonts/Gotham/Gotham-Bold.otf') format('otf');
+	src: url('../fonts/Gotham/Gotham-Bold.woff') format('woff');
+	src: url('../fonts/Gotham/Gotham-Bold.woff2') format('woff2');
+	src: url('../fonts/Gotham/GothamBold.ttf') format('tff');
+	font-weight: 700;
+	font-style: normal;
+}
+
+@font-face {
+	font-family: 'Brandon-Grotesque';
+	src: url('../fonts/Brandon-Grotesque-Font-Family/brandon-grotesque-black.woff2') format('woff2'),
+		url('../fonts/Brandon-Grotesque-Font-Family/brandon-grotesque-black.woff') format('woff'),
+		url('../fonts/Brandon-Grotesque-Font-Family/brandon-grotesque-black.ttf') format('truetype');
+	font-style: normal;
+	font-weight: 900;
+}
+@font-face {
+	font-family: 'Brandon-Grotesque';
+	src: url('../fonts/Brandon-Grotesque-Font-Family/BrandonGrotesque-BoldItalic.woff2') format('woff2'),;
+		// url('/fonts/Brandon-Grotesque-Font-Family/brandon-grotesque-black.woff') format('woff'),
+		// url('/fonts/Brandon-Grotesque-Font-Family/brandon-grotesque-black.ttf') format('truetype');
+	font-style: italic;
+	font-weight: 900;
+}
