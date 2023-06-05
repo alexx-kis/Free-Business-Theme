@@ -31,6 +31,7 @@ html {
 		font-weight: 900;
 		text-transform: uppercase;
 		letter-spacing: -0.025em;
+		margin-bottom: 10px;
 	}
 
 	&__subtitle {
@@ -38,6 +39,7 @@ html {
 		font-size: 16px;
 		font-weight: 300;
 		letter-spacing: normal;
+		line-height: 1.2;
 	}
 }
 
@@ -133,9 +135,14 @@ html {
 		justify-content: space-between;
 	}
 
-	&__logo {}
+	&__logo {
+		margin-right: 18px;
+	}
 
-	&__menu {}
+	&__menu {
+		max-width: 835px;
+		flex: 1 1 835px;
+	}
 
 	&__menu-list {
 		display: flex;
@@ -145,12 +152,13 @@ html {
 		font-weight: 400;
 		text-transform: uppercase;
 		color: #868686;
+		justify-content: space-between;
 	}
 
 	&__menu-item {}
 
 	&__menu-link {
-		padding: 9px 20px;
+		padding: 9px 10px;
 		border-radius: 4px;
 		transition: all .3s;
 		color: #000;
@@ -167,16 +175,16 @@ html {
 /*==================================== HERO ====================================*/
 
 .hero {
-	background-color: #709dca;
-	padding: 204px 0 0 0;
-	height: 674px;
-	margin-bottom: 100px;
+	background: linear-gradient(to bottom, $hero-bg-color 680px, #fff calc(100vh - 680px));
+	padding: 204px 0 100px 0;
+	// min-height: 100vh;
 
 	&__inner {
 		display: flex;
 		flex-direction: column;
 		align-items: center;
 		justify-content: center;
+		// position: relative;
 	}
 
 	&__heading {
@@ -207,7 +215,9 @@ html {
 	&__slider-outer {
 		width: 648px;
 		height: 344px;
-		background: url('../img/hero/computer.png') no-repeat center;
+		background: url('../img/hero/computer.png') no-repeat center / 100%;
+		// position: absolute;
+		// top: 200px;
 	}
 
 	&__slider {
@@ -870,3 +880,8 @@ html {
 		color: #ffffff;
 	}
 }
+
+/*==================================== MEDIA ====================================*/
+/*==================================== MEDIA ====================================*/
+
+@import "media";
