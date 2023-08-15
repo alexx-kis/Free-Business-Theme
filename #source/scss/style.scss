@@ -32,6 +32,9 @@ html {
 		text-transform: uppercase;
 		letter-spacing: -0.025em;
 		margin-bottom: 10px;
+
+		transform: translate(-100px, 0);
+		transition: all .5s;
 	}
 
 	&__subtitle {
@@ -40,6 +43,9 @@ html {
 		font-weight: 300;
 		letter-spacing: normal;
 		line-height: 1.2;
+
+		transform: translate(100px, 0);
+		transition: all .5s .5s;
 	}
 }
 
@@ -54,6 +60,8 @@ html {
 		text-transform: uppercase;
 		letter-spacing: -0.025em;
 		margin-bottom: 10px;
+		transform: translate(-100px, 0);
+		transition: all .5s;
 	}
 
 	&__subtitle {
@@ -62,6 +70,8 @@ html {
 		font-weight: 300;
 		letter-spacing: normal;
 		line-height: 1.2;
+		transform: translate(100px, 0);
+		transition: all .5s .25s;
 	}
 }
 
@@ -121,12 +131,17 @@ html {
 /*==================================== HEADER ====================================*/
 
 .header {
-	height: 94px;
-	width: 100%;
-	position: fixed;
-	background: #fff;
-	z-index: 2;
-	box-shadow: 0px 4px 10px 0px #bcbcbc;
+
+	&__wrapper {
+		height: 94px;
+		width: 100%;
+		position: fixed;
+		background: #fff;
+		z-index: 100;
+		box-shadow: 0px 4px 10px 0px #bcbcbc;
+		transition: all .5s 2s;
+		transform: translate(0, -100px);
+	}
 
 	&__inner {
 		height: 100%;
@@ -144,7 +159,8 @@ html {
 		flex: 1 1 835px;
 	}
 
-	&__menu-list {
+	&__menu-list,
+	&__side-list {
 		display: flex;
 		font-family: lato;
 		font-size: 13.5px;
@@ -157,7 +173,8 @@ html {
 
 	&__menu-item {}
 
-	&__menu-link {
+	&__menu-link,
+	&__side-link {
 		padding: 9px 10px;
 		border-radius: 4px;
 		transition: all .3s;
@@ -168,6 +185,10 @@ html {
 			background-color: #ffbb42;
 		}
 	}
+
+	&__side {
+		display: none;
+	}
 }
 
 
@@ -175,16 +196,16 @@ html {
 /*==================================== HERO ====================================*/
 
 .hero {
-	background: linear-gradient(to bottom, $hero-bg-color 680px, #fff calc(100vh - 680px));
+	background: linear-gradient(to bottom, $hero-bg-color 70%, #fff 30%);
 	padding: 204px 0 100px 0;
-	// min-height: 100vh;
+	height: 100vh;
 
 	&__inner {
 		display: flex;
 		flex-direction: column;
 		align-items: center;
-		justify-content: center;
-		// position: relative;
+		justify-content: space-evenly;
+		height: 100%;
 	}
 
 	&__heading {
@@ -199,6 +220,19 @@ html {
 
 	&__form-label {
 		flex: 1 1 224px;
+		transform: translate(-100px, 0);
+
+		&:first-child {
+			transition: all .5s .75s;
+		}
+
+		&:nth-child(2) {
+			transition: all .5s 1s;
+		}
+
+		&:nth-child(3) {
+			transition: all .5s 1.25s;
+		}
 	}
 
 	&__form-icon {
@@ -208,8 +242,14 @@ html {
 
 	&__form-input {}
 
-	&__form-button {
+	&__form-button-wrapper {
 		flex: 1 1 212px;
+		transform: translate(100px, 0);
+		transition: all .5s 1.5s;
+	}
+
+	&__form-button {
+		width: 100%;
 	}
 
 	&__slider-outer {
@@ -218,6 +258,8 @@ html {
 		background: url('../img/hero/computer.png') no-repeat center / 100%;
 		// position: absolute;
 		// top: 200px;
+		transform: scale(0);
+		transition: transform .5s 1.75s;
 	}
 
 	&__slider {
@@ -282,9 +324,16 @@ html {
 
 	&__list-item {
 		display: flex;
-	}
+		transform: scale(0);
 
-	&__item {}
+		&:nth-child(odd) {
+			transition: all .5s;
+		}
+
+		&:nth-child(even) {
+			transition: all .5s .5s;
+		}
+	}
 
 	&__item-icon {
 		min-width: 100px;
@@ -332,6 +381,8 @@ html {
 	&__image {
 		width: 100%;
 		height: 100%;
+		transform: translate(-100px, 0);
+		transition: all .5s;
 
 		img {
 			width: 100%;
@@ -347,7 +398,8 @@ html {
 		justify-content: center;
 		width: 100%;
 		padding: 30px 80px;
-
+		transform: translate(100px, 0);
+		transition: all .5s .5s;
 	}
 
 	&__heading {
@@ -357,6 +409,7 @@ html {
 
 	.heading__title {
 		color: #ffffff;
+		transform: translate(0, 0);
 	}
 
 	&__text {
@@ -410,7 +463,9 @@ html {
 		font-weight: 300;
 		text-transform: uppercase;
 		background: #fff;
-		
+		transform: scale(0);
+		transition: all .5s .5s;
+
 		&--active {
 			background: #709dca;
 			padding: 85px 30px 75px;
@@ -418,6 +473,9 @@ html {
 			left: 50%;
 			margin-left: -196px;
 			top: -26px;
+			z-index: 1;
+			transform: scale(0);
+			transition: all .5s;
 
 			.prices__item-title {
 				color: #fff;
@@ -442,7 +500,7 @@ html {
 			}
 		}
 	}
-	
+
 	&__item-title {
 		font-size: 25px;
 		color: #818b95;
@@ -520,17 +578,34 @@ html {
 
 	&__arrows {
 		margin-bottom: 10px;
+
 		&-inner {
 			display: flex;
 			justify-content: space-around;
 		}
-		&-image {
-			&--1 {
-				margin-left: -3%;
-			}
-			&--2 {
-				margin-right: -3%;
-			}
+	}
+
+	&__arrow {
+		&--1 {
+			margin-left: -3%;
+
+		}
+
+		&--2 {
+			margin-right: -3%;
+
+		}
+	}
+
+	&__arrow-wrapper {
+		&-1 {
+			transform: scale(0, 1);
+			transition: all .5s;
+		}
+
+		&-2 {
+			transform: scale(0, 1);
+			transition: all .5s .5s;
 		}
 	}
 
@@ -554,7 +629,15 @@ html {
 		position: relative;
 		padding: 0 15px;
 
+		&--1 {
+			transform: translate(-100px, 0);
+			transition: all .5s;
+		}
+
 		&--2 {
+			transform: translate(-100px, 0);
+			transition: all .5s .25s;
+
 			&::after {
 				content: '';
 				display: block;
@@ -568,6 +651,9 @@ html {
 		}
 
 		&--3 {
+			transform: translate(-100px, 0);
+			transition: all .5s .5s;
+
 			&::after {
 				content: '';
 				display: block;
@@ -578,6 +664,11 @@ html {
 				top: 90px;
 				left: 15px;
 			}
+		}
+
+		&--4 {
+			transform: translate(-100px, 0);
+			transition: all .5s .75s;
 		}
 	}
 
@@ -606,6 +697,11 @@ html {
 	}
 
 	&__button {
+		&-wrapper {
+			transform: translate(0, 100px);
+			transition: all .5s;
+		}
+
 		margin: 0 auto;
 	}
 }
@@ -635,6 +731,8 @@ html {
 		padding: 45px 30px 52px 30px;
 		background: #fff;
 		border-radius: 4px;
+		transform: scale(0);
+		transition: all .5s;
 	}
 
 	&__item-photo {
@@ -696,10 +794,14 @@ html {
 
 		&--name {
 			flex: 1 1 308px;
+			transform: translate(-100px, 0);
+			transition: all .5s;
 		}
 
 		&--email {
 			flex: 1 1 388px;
+			transform: translate(-100px, 0);
+			transition: all .5s .5s;
 		}
 	}
 
@@ -710,6 +812,11 @@ html {
 
 	&__form-input {
 		border: 1px solid #cbcbcb;
+	}
+
+	&__form-button-wrapper {
+		transform: translate(100px, 0);
+		transition: all 1s;
 	}
 
 	&__form-button {
@@ -725,6 +832,8 @@ html {
 		align-items: center;
 		position: relative;
 		margin: 0 -20px;
+		transform: scale(0);
+		transition: all .5s;
 
 		&::after {
 			content: '';
@@ -788,6 +897,8 @@ html {
 	&__top {
 		padding-top: 70px;
 		padding-bottom: 50px;
+		transform: translate(0, 100px);
+		transition: all .5s;
 	}
 
 	&__menu {
@@ -830,8 +941,6 @@ html {
 		align-items: center;
 	}
 
-	&__phone-icon {}
-
 	&__phone-text {
 		font-family: Lato;
 		font-size: 22.6px;
@@ -855,8 +964,6 @@ html {
 		justify-content: space-between;
 	}
 
-	&__socials-item {}
-
 	&__socials-link {
 		transition: all .3s;
 
@@ -868,6 +975,8 @@ html {
 	&__bottom {
 		background: #709dca;
 		padding: 18px 0;
+		transform: translate(0, 50px);
+		transition: all .5s;
 	}
 
 	&__bottom-text {
@@ -882,7 +991,25 @@ html {
 	}
 }
 
+
+
 /*==================================== MEDIA ====================================*/
 /*==================================== MEDIA ====================================*/
 
 @import "media";
+
+
+/*==================================== ANIMATION ====================================*/
+/*==================================== ANIMATION ====================================*/
+
+.loading,
+.anim-item {
+	opacity: 0;
+}
+
+.loaded,
+.anim-item--active {
+	opacity: 1;
+	transform: translate(0, 0);
+	transform: scale(1);
+}

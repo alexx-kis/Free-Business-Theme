@@ -100,6 +100,10 @@
 @media (max-width: 800px) {
 	.header {
 		&__menu {
+			display: none;
+		}
+
+		&__side {
 			position: fixed;
 			top: 0;
 			bottom: 0;
@@ -111,6 +115,7 @@
 			justify-content: center;
 			transition: all .3s;
 			transform: translateX(100%);
+			z-index: 100;
 
 			&--open {
 				transform: translateX(0%);
@@ -127,19 +132,27 @@
 		}
 	}
 
+
+	.burger__wrapper {
+		position: fixed;
+		top: 20px;
+		right: 20px;
+		transition: all .5s 2s;
+		transform: translate(0, -100px);
+		z-index: 101;
+	}
+
 	.burger {
 		cursor: pointer;
 		width: 50px;
 		height: 50px;
-		position: absolute;
-		top: 20px;
-		right: 20px;
-		z-index: 3;
+		z-index: 101;
 		display: flex;
 		flex-direction: column;
 		align-items: center;
 		justify-content: space-evenly;
 		border-radius: 50%;
+
 
 		&__line {
 			width: 40px;
@@ -187,7 +200,7 @@
 			width: 32px;
 		}
 
-		&__arrows-image {
+		&__arrow {
 			transform: translateY(-44px) rotate(270deg);
 		}
 
@@ -219,13 +232,13 @@
 		&__top {
 			padding-top: 40px;
 		}
+
 		&__menu-list {
 			flex-direction: column;
 			align-items: center;
 		}
-		&__menu-item {
-			
-		}
+
+		&__menu-item {}
 	}
 }
 
@@ -239,7 +252,6 @@
 	.hero {
 		background: linear-gradient(to bottom, $hero-bg-color 740px, #fff calc(100vh - 740px));
 		padding-top: 130px;
-		// height: 800px;
 
 		&__form {
 			flex-direction: column;
@@ -255,7 +267,11 @@
 			&-button {
 				flex: 1 1 auto;
 				max-width: 100%;
-				width: auto;
+				width: 100%;
+
+			}
+			&-button-wrapper {
+				flex: 1 1 auto;
 			}
 		}
 
@@ -285,10 +301,13 @@
 		&__form-label {
 			margin-right: 0;
 			margin-bottom: 20px;
-			&--name, &--email {
+
+			&--name,
+			&--email {
 				flex: 1 1 auto;
 			}
 		}
+
 		&__form-button {
 			max-width: 224px;
 			width: 224px;
@@ -296,83 +315,83 @@
 	}
 }
 
-	/*------------------------------ 600 ------------------------------*/
-	@media (max-width: 600px) {
-		.about {
-			&__info {
-				padding: 20px 30px;
+/*------------------------------ 600 ------------------------------*/
+@media (max-width: 600px) {
+	.about {
+		&__info {
+			padding: 20px 30px;
+		}
+	}
+}
+
+
+/*------------------------------ 530 ------------------------------*/
+@media (max-width: 530px) {
+	.hero {
+		background: linear-gradient(to bottom, $hero-bg-color 700px, #fff calc(100vh - 700px));
+
+		&__slider-outer {
+			width: 364px;
+			height: 194px;
+		}
+
+		&__slider {
+			margin-top: 10px;
+			width: 256px;
+		}
+	}
+}
+
+
+/*------------------------------ 425 ------------------------------*/
+@media (max-width: 425px) {
+	.header {
+		&__menu {
+			min-width: 100%;
+		}
+	}
+
+	.hero {
+		background: linear-gradient(to bottom, #709dca 630px, #fff calc(100vh - 630px));
+		padding-bottom: 0;
+
+		&__slider-outer {
+			width: 260px;
+		}
+
+		&__slider {
+			width: 180px;
+			margin-top: 35px;
+			margin-bottom: 40px;
+		}
+
+		&__form {
+			margin-bottom: 0;
+		}
+	}
+
+	.prices {
+		&__options-option {
+			&::before {
+				width: 250px;
 			}
 		}
 	}
 
+	.clients {
+		&__item {
+			flex-direction: column;
+			padding: 30px;
+		}
 
-	/*------------------------------ 530 ------------------------------*/
-	@media (max-width: 530px) {
-		.hero {
-			background: linear-gradient(to bottom, $hero-bg-color 700px, #fff calc(100vh - 700px));
+		&__item-photo {
+			margin-right: 0;
+			margin-bottom: 20px;
 
-			&__slider-outer {
-				width: 364px;
-				height: 194px;
-			}
-
-			&__slider {
-				margin-top: 10px;
-				width: 256px;
+			img {
+				display: block;
+				margin: 0 auto;
 			}
 		}
 	}
-
-
-	/*------------------------------ 425 ------------------------------*/
-	@media (max-width: 425px) {
-		.header {
-			&__menu {
-				min-width: 100%;
-			}
-		}
-
-		.hero {
-			background: linear-gradient(to bottom, #709dca 630px, #fff calc(100vh - 630px));
-			padding-bottom: 0;
-
-			&__slider-outer {
-				width: 260px;
-			}
-
-			&__slider {
-				width: 180px;
-				margin-top: 35px;
-				margin-bottom: 40px;
-			}
-
-			&__form {
-				margin-bottom: 0;
-			}
-		}
-
-		.prices {
-			&__options-option {
-				&::before {
-					width: 250px;
-				}
-			}
-		}
-
-		.clients {
-			&__item {
-				flex-direction: column;
-				padding: 30px;
-			}
-
-			&__item-photo {
-				margin-right: 0;
-				margin-bottom: 20px;
-
-				img {
-					display: block;
-					margin: 0 auto;
-				}
-			}
-		}
-	}
+}

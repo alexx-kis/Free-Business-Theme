@@ -14,45 +14,76 @@
 <body>
 	<div class="wrapper">
 
+		<div class="burger__wrapper loading">
+			<div class="burger">
+				<div class="burger__line"></div>
+				<div class="burger__line"></div>
+				<div class="burger__line"></div>
+			</div>
+		</div>
 		<header class="header">
-			<div class="container">
 
-				<div class="burger">
-					<div class="burger__line"></div>
-					<div class="burger__line"></div>
-					<div class="burger__line"></div>
-				</div>
-
-				<div class="header__inner">
-					<div class="header__logo">
-						<img src="./img/header/header-logo.png" alt="">
+			<div class="header__wrapper loading">
+				<div class="container">
+					<div class="header__inner">
+						<div class="header__logo">
+							<img src="./img/header/header-logo.png" alt="">
+						</div>
+						<nav class="header__menu">
+							<ul class="header__menu-list">
+								<li class="header__menu-item">
+									<a href="#home" class="header__menu-link">HOME</a>
+								</li>
+								<li class="header__menu-item">
+									<a href="#service" class="header__menu-link">SERVICE</a>
+								</li>
+								<li class="header__menu-item">
+									<a href="#about" class="header__menu-link">ABOUT US</a>
+								</li>
+								<li class="header__menu-item">
+									<a href="#pricing" class="header__menu-link">PRICEING TABLE</a>
+								</li>
+								<li class="header__menu-item">
+									<a href="#howitwork" class="header__menu-link">HOW IT WORKS</a>
+								</li>
+								<li class="header__menu-item">
+									<a href="#clients" class="header__menu-link">HAPPY CLIENTS</a>
+								</li>
+								<li class="header__menu-item">
+									<a href="#contact" class="header__menu-link">CONTACT US</a>
+								</li>
+							</ul>
+						</nav>
 					</div>
-					<nav class="header__menu">
-						<ul class="header__menu-list">
-							<li class="header__menu-item">
-								<a href="#home" class="header__menu-link">HOME</a>
-							</li>
-							<li class="header__menu-item">
-								<a href="#service" class="header__menu-link">SERVICE</a>
-							</li>
-							<li class="header__menu-item">
-								<a href="#about" class="header__menu-link">ABOUT US</a>
-							</li>
-							<li class="header__menu-item">
-								<a href="#pricing" class="header__menu-link">PRICEING TABLE</a>
-							</li>
-							<li class="header__menu-item">
-								<a href="#howitwork" class="header__menu-link">HOW IT WORKS</a>
-							</li>
-							<li class="header__menu-item">
-								<a href="#clients" class="header__menu-link">HAPPY CLIENTS</a>
-							</li>
-							<li class="header__menu-item">
-								<a href="#contact" class="header__menu-link">CONTACT US</a>
-							</li>
-						</ul>
-					</nav>
 				</div>
+
+			</div>
+			<div class="header__side">
+				<nav class="header__side-menu">
+					<ul class="header__side-list">
+						<li class="header__side-item">
+							<a href="#home" class="header__side-link">HOME</a>
+						</li>
+						<li class="header__side-item">
+							<a href="#service" class="header__side-link">SERVICE</a>
+						</li>
+						<li class="header__side-item">
+							<a href="#about" class="header__side-link">ABOUT US</a>
+						</li>
+						<li class="header__side-item">
+							<a href="#pricing" class="header__side-link">PRICEING TABLE</a>
+						</li>
+						<li class="header__side-item">
+							<a href="#howitwork" class="header__side-link">HOW IT WORKS</a>
+						</li>
+						<li class="header__side-item">
+							<a href="#clients" class="header__side-link">HAPPY CLIENTS</a>
+						</li>
+						<li class="header__side-item">
+							<a href="#contact" class="header__side-link">CONTACT US</a>
+						</li>
+					</ul>
+				</nav>
 			</div>
 		</header>
 
@@ -62,35 +93,37 @@
 				<div class="container">
 					<div class="hero__inner">
 						<div class="hero__heading main-heading">
-							<h1 class="main-heading__title">Boost up your Local business</h1>
-							<h2 class="main-heading__subtitle">Lorem Ipsum is simply dummy text of the printing and
+							<h1 class="main-heading__title loading">Boost up your Local business</h1>
+							<h2 class="main-heading__subtitle loading">Lorem Ipsum is simply dummy text of the printing and
 								typesetting industry. Lorem Ipsum typesetting</h2>
 						</div>
 						<form class="hero__form">
-							<div class="hero__form-label label">
+							<div class="hero__form-label label loading">
 								<div class="hero__form-icon">
 									<img src="./img/hero/name.png" alt="">
 								</div>
 								<input type="text" class="hero__form-input input hero__form-input--name"
 									placeholder="Full Name">
 							</div>
-							<div class="hero__form-label label">
+							<div class="hero__form-label label loading">
 								<div class="hero__form-icon">
 									<img src="./img/hero/message.png" alt="">
 								</div>
 								<input type="email" class="hero__form-input input hero__form-input--email"
 									placeholder="Email Address">
 							</div>
-							<div class="hero__form-label label">
+							<div class="hero__form-label label loading">
 								<div class="hero__form-icon">
 									<img src="./img/hero/phone.png" alt="">
 								</div>
 								<input type="text" class="hero__form-input input hero__form-input--phone"
 									placeholder="Phone Number">
 							</div>
-							<button class="hero__form-button button">Request a quote</button>
+							<div class="hero__form-button-wrapper loading">
+								<button class="hero__form-button button">Request a quote</button>
+							</div>
 						</form>
-						<div class="hero__slider-outer">
+						<div class="hero__slider-outer loading">
 							<div class="hero__slider">
 								<div class="hero__slide-inner">
 									<div class="hero__slide">
@@ -117,11 +150,11 @@
 			<section class="main__services services" id="service">
 				<div class="container">
 					<div class="services__heading heading">
-						<h2 class="heading__title">Our Services</h2>
-						<h3 class="heading__subtitle">Lorem Ipsum is simply dummy Business industry.</h3>
+						<h2 class="heading__title anim-item anim-no-hide">Our Services</h2>
+						<h3 class="heading__subtitle anim-item anim-no-hide">Lorem Ipsum is simply dummy Business industry.</h3>
 					</div>
 					<ul class="services__list">
-						<li class="services__list-item services__item">
+						<li class="services__list-item services__item anim-item anim-no-hide">
 							<div class="services__item-icon">
 								<img src="./img/services/clock-icon.png" alt="">
 							</div>
@@ -133,7 +166,7 @@
 									since the 1500s, when an unknown printer.</p>
 							</div>
 						</li>
-						<li class="services__list-item services__item">
+						<li class="services__list-item services__item anim-item anim-no-hide">
 							<div class="services__item-icon">
 								<img src="./img/services/engine-icon.png" alt="">
 							</div>
@@ -144,7 +177,7 @@
 									'lorem ipsum' will uncover many web sites still in their infancy</p>
 							</div>
 						</li>
-						<li class="services__list-item services__item">
+						<li class="services__list-item services__item anim-item anim-no-hide">
 							<div class="services__item-icon">
 								<img src="./img/services/hat-icon.png" alt="">
 							</div>
@@ -156,7 +189,7 @@
 									cover many web sites still in their infancy</p>
 							</div>
 						</li>
-						<li class="services__list-item services__item">
+						<li class="services__list-item services__item anim-item anim-no-hide">
 							<div class="services__item-icon">
 								<img src="./img/services/rocket-icon.png" alt="">
 							</div>
@@ -168,7 +201,7 @@
 									or randomised words which don't look even slightly believable.</p>
 							</div>
 						</li>
-						<li class="services__list-item services__item">
+						<li class="services__list-item services__item anim-item anim-no-hide">
 							<div class="services__item-icon">
 								<img src="./img/services/brain-icon.png" alt="">
 							</div>
@@ -180,7 +213,7 @@
 									Rackham.</p>
 							</div>
 						</li>
-						<li class="services__list-item services__item">
+						<li class="services__list-item services__item anim-item anim-no-hide">
 							<div class="services__item-icon">
 								<img src="./img/services/dollar-icon.png" alt="">
 							</div>
@@ -199,10 +232,10 @@
 			<section class="main__about about" id="about">
 				<div class="container">
 					<div class="about__inner">
-						<div class="about__image">
+						<div class="about__image anim-item anim-no-hide">
 							<img src="./img/about/about_image.jpg" alt="">
 						</div>
-						<div class="about__info">
+						<div class="about__info anim-item anim-no-hide">
 							<div class="about__heading heading">
 								<h2 class="heading__title">About us</h2>
 							</div>
@@ -226,12 +259,12 @@
 			<section class="main__prices prices" id="pricing">
 				<div class="container">
 					<div class="prices__heading heading">
-						<h2 class="heading__title">Choose your price</h2>
-						<h3 class="heading__subtitle">Lorem Ipsum is simply dummy text of the printing typesetting .
+						<h2 class="heading__title anim-item anim-no-hide">Choose your price</h2>
+						<h3 class="heading__subtitle anim-item anim-no-hide">Lorem Ipsum is simply dummy text of the printing typesetting .
 						</h3>
 					</div>
 					<ul class="prices__list">
-						<li class="prices__list-item prices__item">
+						<li class="prices__list-item prices__item anim-item anim-no-hide">
 							<h4 class="prices__item-title">Basic plan</h4>
 							<div class="prices__item-cost"><span class="prices__item-cost--bold"><span
 										class="prices__item-cost-dollar">$</span>22</span> per month</div>
@@ -242,7 +275,7 @@
 							</ul>
 							<a href="#" class="prices__item-button button">Get Started</a>
 						</li>
-						<li class="prices__list-item prices__item prices__item--active">
+						<li class="prices__list-item prices__item prices__item--active anim-item anim-no-hide">
 							<h4 class="prices__item-title">Premium plan</h4>
 							<div class="prices__item-cost"><span class="prices__item-cost--bold"><span
 										class="prices__item-cost-dollar">$</span>42</span> per month</div>
@@ -253,7 +286,7 @@
 							</ul>
 							<a href="#" class="prices__item-button button">Get Started</a>
 						</li>
-						<li class="prices__list-item prices__item">
+						<li class="prices__list-item prices__item anim-item anim-no-hide">
 							<h4 class="prices__item-title">Gold plan</h4>
 							<div class="prices__item-cost"><span class="prices__item-cost--bold"><span
 										class="prices__item-cost-dollar">$</span>62</span> per month</div>
@@ -271,22 +304,26 @@
 			<section class="main__process process" id="howitwork">
 				<div class="container">
 					<div class="process__heading heading">
-						<h2 class="heading__title">How it works</h2>
-						<h3 class="heading__subtitle">Lorem Ipsum is simply dummy Business industry</h3>
+						<h2 class="heading__title anim-item anim-no-hide">How it works</h2>
+						<h3 class="heading__subtitle anim-item anim-no-hide">Lorem Ipsum is simply dummy Business industry</h3>
 					</div>
 					<div class="process__inner">
 						<div class="process__arrows">
 							<div class="process__arrows-inner">
-								<div class="process__arrows-image process__arrows-image--1">
-									<img src="./img/process/arrows_icon.png" alt="">
+								<div class="process__arrow-wrapper-1 anim-item anim-no-hide">
+									<div class="process__arrow process__arrow--1">
+										<img src="./img/process/arrows_icon.png" alt="">
+									</div>
 								</div>
-								<div class="process__arrows-image process__arrows-image--2">
-									<img src="./img/process/arrows_icon.png" alt="">
+								<div class="process__arrow-wrapper-2 anim-item anim-no-hide">
+									<div class="process__arrow process__arrow--2">
+										<img src="./img/process/arrows_icon.png" alt="">
+									</div>
 								</div>
 							</div>
 						</div>
 						<ul class="process__cards">
-							<li class="process__cards-card process__card process__card--1">
+							<li class="process__cards-card process__card process__card--1 anim-item anim-no-hide">
 								<div class="process__card-icon">
 									<img src="./img/process/headphones_icon.png" alt="">
 								</div>
@@ -296,7 +333,7 @@
 									ustry. Lorem Ipsum has been
 								</p>
 							</li>
-							<li class="process__cards-card process__card process__card--2">
+							<li class="process__cards-card process__card process__card--2 anim-item anim-no-hide">
 								<div class="process__card-icon">
 									<img src="./img/process/lock_icon.png" alt="">
 								</div>
@@ -306,7 +343,7 @@
 									ustry. Lorem Ipsum has been
 								</p>
 							</li>
-							<li class="process__cards-card process__card process__card--3">
+							<li class="process__cards-card process__card process__card--3 anim-item anim-no-hide">
 								<div class="process__card-icon">
 									<img src="./img/process/cloud_icon.png" alt="">
 								</div>
@@ -316,7 +353,7 @@
 									ustry. Lorem Ipsum has been
 								</p>
 							</li>
-							<li class="process__cards-card process__card process__card--4">
+							<li class="process__cards-card process__card process__card--4 anim-item anim-no-hide">
 								<div class="process__card-icon">
 									<img src="./img/process/thumb_icon.png" alt="">
 								</div>
@@ -328,18 +365,20 @@
 							</li>
 						</ul>
 					</div>
-					<a href="#" class="process__button button">Get start Now</a>
+					<div class="process__button-wrapper anim-item anim-no-hide">
+						<a href="#" class="process__button button">Get start Now</a>
+					</div>
 				</div>
 			</section>
 
 			<section class="main__clients clients" id="clients">
 				<div class="container">
 					<div class="clients__heading heading">
-						<h2 class="heading__title">Happy Clients</h2>
-						<h3 class="heading__subtitle">We are explain who is using our business solutions</h3>
+						<h2 class="heading__title anim-item anim-no-hide">Happy Clients</h2>
+						<h3 class="heading__subtitle anim-item anim-no-hide">We are explain who is using our business solutions</h3>
 					</div>
 					<ul class="clients__list">
-						<li class="clients__list-item clients__item">
+						<li class="clients__list-item clients__item anim-item anim-no-hide">
 							<div class="clients__item-photo">
 								<img src="./img/clients/client_1.png" alt="">
 							</div>
@@ -355,7 +394,7 @@
 								<div class="clients__item-author"><span>Darwin Michle,</span> Project manager</div>
 							</div>
 						</li>
-						<li class="clients__list-item clients__item">
+						<li class="clients__list-item clients__item anim-item anim-no-hide">
 							<div class="clients__item-photo">
 								<img src="./img/clients/client_2.png" alt="">
 							</div>
@@ -371,7 +410,7 @@
 								<div class="clients__item-author"><span>Madam Elisabath,</span> Creative Director</div>
 							</div>
 						</li>
-						<li class="clients__list-item clients__item">
+						<li class="clients__list-item clients__item anim-item anim-no-hide">
 							<div class="clients__item-photo">
 								<img src="./img/clients/client_3.png" alt="">
 							</div>
@@ -387,7 +426,7 @@
 								<div class="clients__item-author"><span>Clips arter,</span> Lipsum directer</div>
 							</div>
 						</li>
-						<li class="clients__list-item clients__item">
+						<li class="clients__list-item clients__item anim-item anim-no-hide">
 							<div class="clients__item-photo">
 								<img src="./img/clients/client_4.png" alt="">
 							</div>
@@ -410,29 +449,31 @@
 			<section class="main__newsletter newsletter" id="contact">
 				<div class="container">
 					<div class="newsletter__heading heading">
-						<h2 class="heading__title">
+						<h2 class="heading__title anim-item anim-no-hide">
 							Newsletter
 						</h2>
-						<h3 class="heading__subtitle">
+						<h3 class="heading__subtitle anim-item anim-no-hide">
 							Lorem Ipsum is simply dummy Business industry
 						</h3>
 					</div>
 					<form class="newsletter__form">
-						<div class="newsletter__form-label label newsletter__form-label--name">
+						<div class="newsletter__form-label label newsletter__form-label--name anim-item anim-no-hide">
 							<div class="newsletter__form-icon">
 								<img src="./img/hero/name.png" alt="">
 							</div>
 							<input type="text" class="newsletter__form-input  input" placeholder="Name">
 						</div>
-						<div class="newsletter__form-label newsletter__form-label--email label">
+						<div class="newsletter__form-label newsletter__form-label--email label anim-item anim-no-hide">
 							<div class="newsletter__form-icon">
 								<img src="./img/hero/message.png" alt="">
 							</div>
 							<input type="email" class="newsletter__form-input input" placeholder="Email Address">
 						</div>
-						<button class="newsletter__form-button button">Subscribe now</button>
+						<div class="newsletter__form-button-wrapper anim-item anim-no-hide">
+							<button class="newsletter__form-button button">Subscribe now</button>
+						</div>
 					</form>
-					<div class="newsletter__address">
+					<div class="newsletter__address anim-item anim-no-hide">
 						<div class="newsletter__address-point">
 							<h4 class="newsletter__address-title">Address</h4>
 							<p class="newsletter__address-text">
@@ -455,7 +496,7 @@
 		</main>
 
 		<footer class="footer">
-			<div class="footer__top container">
+			<div class="footer__top container  anim-item anim-no-hide">
 
 				<nav class="footer__menu">
 					<ul class="footer__menu-list">
@@ -516,7 +557,7 @@
 				</div>
 
 			</div>
-			<div class="footer__bottom">
+			<div class="footer__bottom anim-item anim-no-hide">
 				<div class="container">
 					<p class="footer__bottom-text">
 						All contents © copyright 2014 Business Theme. All rights reserved Designed by : akhilwebfolio
